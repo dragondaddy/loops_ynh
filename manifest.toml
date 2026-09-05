@@ -7,7 +7,7 @@ name = "Loops"
 description.en = "Federated short video sharing platform"
 description.fr = "Plateforme fédérée de partage de vidéos courtes"
 
-version = "1.0.0-beta.14~ynh1"
+version = "1.0.0-beta.14~ynh2"
 
 maintainers = ["Papa Dragon", "grossermensch"]
 
@@ -90,8 +90,8 @@ ram.runtime = "350M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/joinloops/loops-server/archive/b01ed9d9b8b49571c7cc50e4dce985dcb1869cb3.zip"
-    sha256 = "39517bee6907a4f4420a9d0ea41f426122552ff7d50b46d5a08f208e19b5b15b"
+    url = "https://github.com/joinloops/loops-server/archive/74aae01c6eed198db0cb46e3a1865ebe577ad3fc.zip"
+    sha256 = "665d8bd7b4e526051176afa2aa7500649bfa2f07dc37d0a7d01024fb9b6b723a"
 
     [resources.sources.redisbloom]
     url = "https://github.com/RedisBloom/RedisBloom/archive/refs/tags/v8.0.8.zip"
