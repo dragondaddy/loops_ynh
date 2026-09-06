@@ -77,17 +77,14 @@ redisbloom_installer() {
 
     # Add loadmodule line to redis.conf if not already present
     if ! grep -q "^[[:space:]]*loadmodule /etc/redis/modules/redisbloom.so" /etc/redis/redis.conf; then
-        ynh_print_info "Adding RedisBloom module to redis.conf"
-        echo "loadmodule /etc/redis/modules/redisbloom.so" >> /etc/redis/redis.conf
+        ynh_print_info "Adding RedisBloom module to redis.conf without enabling it (has to be done manually)"
+        echo "#loadmodule /etc/redis/modules/redisbloom.so" >> /etc/redis/redis.conf
     else
         ynh_print_info "RedisBloom module already present in redis.conf"
     fi
 
     # Cleanup
     ynh_safe_rm "$TMPDIR"
-
-    # Restart Redis
-    ynh_systemctl --service=redis --action=restart
 
     ynh_print_info "RedisBloom installation completed successfully."
 }
